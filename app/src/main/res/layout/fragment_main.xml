@@ -1,0 +1,186 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityFragment"
+    android:id="@+id/coordinatorLayout"
+    android:background="@color/LightGoldenrodYellow"
+
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:textColor="@color/White"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivityFragment"
+        android:id="@+id/relativeLayout">
+
+        <ProgressBar
+            android:id="@+id/circularProgressbar"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:indeterminate="false"
+            android:progress="50"
+            android:max="100"
+            android:secondaryProgress="100"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/my_progress_bar" />
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:id="@+id/textViewPoints"
+            android:layout_above="@id/circularProgressbar"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/LimeGreen"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:id="@+id/textViewPoints2"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/circularProgressbar"
+            android:textColor="@color/Red"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Player 1"
+            android:layout_above="@id/textViewPoints"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/LimeGreen"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Player 2 "
+            android:id="@+id/textView2"
+            android:layout_below="@id/textViewPoints2"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/Red"/>
+
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_image_button"
+            android:layout_width="@dimen/fab_button_diameter"
+            android:layout_height="@dimen/fab_button_diameter"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/fab_ic_add"
+            android:tint="@android:color/white"
+            />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/fab_image_button2"
+            android:layout_width="@dimen/fab_button_diameter"
+            android:layout_height="@dimen/fab_button_diameter"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/fab_image_button"
+            android:layout_marginRight="@dimen/fab_button_margin_right"
+            android:background="@drawable/fab_shape"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:visibility="gone"
+            android:onClick="ballClicked"
+            />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/fab_image_button3"
+            android:layout_width="@dimen/fab_button_diameter"
+            android:layout_height="@dimen/fab_button_diameter"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/fab_image_button2"
+            android:layout_marginRight="@dimen/fab_button_margin_right"
+            android:background="@drawable/fab_shape"
+            android:backgroundTint="@color/Gold"
+            android:visibility="gone"
+            android:onClick="ballClicked"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/fab_image_button4"
+            android:layout_width="@dimen/fab_button_diameter"
+            android:layout_height="@dimen/fab_button_diameter"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/fab_image_button3"
+            android:layout_marginRight="@dimen/fab_button_margin_right"
+            android:background="@drawable/fab_shape"
+            android:backgroundTint="@color/Green"
+            android:visibility="gone"
+            android:onClick="ballClicked"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/fab_image_button5"
+            android:layout_width="@dimen/fab_button_diameter"
+            android:layout_height="@dimen/fab_button_diameter"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/fab_image_button4"
+            android:layout_marginRight="@dimen/fab_button_margin_right"
+            android:background="@drawable/fab_shape"
+            android:backgroundTint="@color/SaddleBrown"
+            android:visibility="gone"
+            android:onClick="ballClicked"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/fab_image_button6"
+            android:layout_width="@dimen/fab_button_diameter"
+            android:layout_height="@dimen/fab_button_diameter"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/fab_image_button5"
+            android:layout_marginRight="@dimen/fab_button_margin_right"
+            android:background="@drawable/fab_shape"
+            android:backgroundTint="@color/Blue"
+            android:visibility="gone"
+            android:onClick="ballClicked"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/fab_image_button7"
+            android:layout_width="@dimen/fab_button_diameter"
+            android:layout_height="@dimen/fab_button_diameter"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/fab_image_button6"
+            android:layout_marginRight="@dimen/fab_button_margin_right"
+            android:background="@drawable/fab_shape"
+            android:backgroundTint="@color/Pink"
+            android:visibility="gone"
+            android:onClick="ballClicked"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/fab_image_button8"
+            android:layout_width="@dimen/fab_button_diameter"
+            android:layout_height="@dimen/fab_button_diameter"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/fab_image_button7"
+            android:layout_marginRight="@dimen/fab_button_margin_right"
+            android:background="@drawable/fab_shape"
+            android:backgroundTint="@color/Black"
+            android:visibility="gone"
+            android:onClick="ballClicked"/>
+
+
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
